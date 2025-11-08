@@ -25,7 +25,7 @@ namespace Wolf_Rabbit
             this.worldHeight = height;
             this.cellSize = cellSize;
             InitializeGrid();
-            Reset();
+            Reset();    
         }
         public void Reset() 
         {

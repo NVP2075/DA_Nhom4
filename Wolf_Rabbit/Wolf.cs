@@ -98,8 +98,6 @@ namespace Wolf_Rabbit
                 baby.PositionX = this.PositionX;
                 baby.PositionY = this.PositionY;
                 baby.AnimalColor = Color.Gray;
-                baby.Energy = 10;
-                baby.Age = 1;
                 this.Energy = 20;
                 return baby;
             }

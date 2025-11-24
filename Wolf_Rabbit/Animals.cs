@@ -71,7 +71,11 @@ namespace Wolf_Rabbit
             set { this.moveSpeed = value; }
         }
         protected static Random randomGen = new Random(); //protected dùng để mở rộng quyền truy cập cho các lớp
+<<<<<<< HEAD
                                                           //con kế thừa từ lớp Animal
+=======
+                                                          //con kế thừa từ lớp Anima
+>>>>>>> 8eaac5de00c2a2322b06996ca49a79fa8e71029c
         public virtual void Move(List<Animal>[,] grid,int worldWidth,int worldHeight)
         {
             return;

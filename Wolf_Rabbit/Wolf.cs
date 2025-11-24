@@ -22,7 +22,7 @@ namespace Wolf_Rabbit
             this.MoveSpeed = 50;
         }
         //Phương thức di chuyển và săn mồi của sói
-        public void Move( List<Animal>[,] grid, int worldWidth,int worldHeight)
+        public override void Move(List<Animal>[,] grid, int worldWidth,int worldHeight)
         {
             Rabbit target = null;
             double minDist = -1;
@@ -68,10 +68,16 @@ namespace Wolf_Rabbit
                 else
                 {
                     //Di chuyển theo hướng của con mồi
-                    if (target.PositionX > this.PositionX) this.PositionX += this.MoveSpeed;
-                    else if (target.PositionX < this.PositionX) this.PositionX -= this.MoveSpeed;
-                    if (target.PositionY > this.PositionY) this.PositionY += this.MoveSpeed;
-                    else this.PositionY -= this.MoveSpeed;
+                    if (target.PositionX > this.PositionX && target.PositionY > this.PositionY)
+                    {
+                        this.PositionX += this.MoveSpeed;
+                        this.PositionY += this.MoveSpeed;
+                    }
+                    else if (target.PositionX < this.PositionX && target.PositionY < this.PositionY)
+                    {
+                        this.PositionX -= this.MoveSpeed;
+                        this.PositionY -= this.MoveSpeed;
+                    }                 
                 }
             }
             else //Khoảng cách lớn hơn 500 thì di chuyển ngẫu nhiên

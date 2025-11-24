@@ -23,7 +23,7 @@ namespace Wolf_Rabbit
             this.MoveSpeed = 10;
         }
         //Phương thức di chuyển của Rabbit
-        public void Move(List<Animal>[,] grid, int worldWidth, int worldHeight)
+        public override void Move(List<Animal>[,] grid, int worldWidth, int worldHeight)
         {
             int indexX = randomGen.Next(-this.MoveSpeed, this.MoveSpeed);
             int indexY = randomGen.Next(-this.MoveSpeed, this.MoveSpeed);

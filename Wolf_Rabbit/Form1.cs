@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -138,6 +139,18 @@ namespace Wolf_Rabbit
         {
             timer1.Stop();
             Application.Exit();
+        }
+        private void btnLuuFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog svd = new SaveFileDialog();
+            svd.Filter = "PNG Image|*.png|JPEG Image|*.jpg";
+            svd.FileName = "";
+            if (svd.ShowDialog() == DialogResult.OK)
+            {
+                chartSoLuong.SaveImage(svd.FileName, ChartImageFormat.Png);
+                MessageBox.Show("Đã lưu biểu đồ");
+            }
+
         }
     }
 

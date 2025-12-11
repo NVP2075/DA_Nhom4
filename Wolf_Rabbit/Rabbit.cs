@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Wolf_Rabbit
 {
-    internal class Rabbit:Animal
+     class Rabbit:Animal
     {
         public Rabbit()
         {
-            this.PositionX = 1;
-            this.PositionY = 1;
+            this.PositionX = 0;
+            this.PositionY = 0;
             this.Energy = 1;
             this.Age = 1;
             this.AnimalColor = Color.White;

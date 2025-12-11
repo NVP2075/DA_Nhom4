@@ -30,8 +30,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.Start = new System.Windows.Forms.Button();
             this.World = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -45,7 +45,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtThoiGian = new System.Windows.Forms.TextBox();
-            this.btnLuuFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,16 +109,16 @@
             // 
             // chartSoLuong
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartSoLuong.ChartAreas.Add(chartArea2);
-            legend2.Alignment = System.Drawing.StringAlignment.Center;
-            legend2.DockedToChartArea = "ChartArea1";
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.IsDockedInsideChartArea = false;
-            legend2.MaximumAutoSize = 100F;
-            legend2.Name = "Legend1";
-            legend2.Title = "Biểu Đồ Thể Hiện Số Lượng Sói Và Thỏ";
-            this.chartSoLuong.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartSoLuong.ChartAreas.Add(chartArea1);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.IsDockedInsideChartArea = false;
+            legend1.MaximumAutoSize = 100F;
+            legend1.Name = "Legend1";
+            legend1.Title = "Biểu Đồ Thể Hiện Số Lượng Sói Và Thỏ";
+            this.chartSoLuong.Legends.Add(legend1);
             this.chartSoLuong.Location = new System.Drawing.Point(890, 4);
             this.chartSoLuong.Name = "chartSoLuong";
             this.chartSoLuong.Size = new System.Drawing.Size(575, 617);
@@ -180,23 +179,11 @@
             this.txtThoiGian.Size = new System.Drawing.Size(56, 22);
             this.txtThoiGian.TabIndex = 12;
             // 
-            // btnLuuFile
-            // 
-            this.btnLuuFile.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLuuFile.Location = new System.Drawing.Point(477, 469);
-            this.btnLuuFile.Name = "btnLuuFile";
-            this.btnLuuFile.Size = new System.Drawing.Size(147, 41);
-            this.btnLuuFile.TabIndex = 14;
-            this.btnLuuFile.Text = "Lưu Biểu Đồ";
-            this.btnLuuFile.UseVisualStyleBackColor = false;
-            this.btnLuuFile.Click += new System.EventHandler(this.btnLuuFile_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 662);
-            this.Controls.Add(this.btnLuuFile);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtThoiGian);
             this.Controls.Add(this.textBox2);
@@ -233,7 +220,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox txtThoiGian;
-        private System.Windows.Forms.Button btnLuuFile;
     }
 }
 

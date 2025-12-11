@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace Wolf_Rabbit
 {
-    public class Wolf: Animal
+     class Wolf: Animal
     {
         
         

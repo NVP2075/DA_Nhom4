@@ -27,7 +27,6 @@ namespace Wolf_Rabbit
         {
             ecosystem = new Ecosystem(World.Width, World.Height, 10);
             InitializeChart();
-            
         }
         //Vẽ biểu đồ
         private void InitializeChart()
@@ -47,6 +46,7 @@ namespace Wolf_Rabbit
             chartArea.AxisY.TitleFont = new Font("Arial",10,FontStyle.Bold);
             chartArea.AxisY.MajorGrid.Enabled = false;
             chartSoLuong.ChartAreas.Add(chartArea);
+            chartSoLuong.ChartAreas[0].AxisX.ScaleView.Zoom(tickCount - 10, tickCount);
             //Tạo và cấu hình chart dạng line cho thỏ
             Series rabbit = new Series("Rabbit");
             rabbit.ChartType = SeriesChartType.Line;
@@ -79,8 +79,6 @@ namespace Wolf_Rabbit
             chartSoLuong.Series["Wolf"].Points.AddXY(tickCount, wolfCount);
             if (chartSoLuong.Series["Rabbit"].Points.Count > 10)
             {
-                chartSoLuong.Series["Rabbit"].Points.RemoveAt(0);
-                chartSoLuong.Series["Wolf"].Points.RemoveAt(0);
                 chartSoLuong.ChartAreas[0].AxisX.Minimum = tickCount - 10;
                 chartSoLuong.ChartAreas[0].AxisX.Maximum = tickCount;
             }
@@ -139,18 +137,6 @@ namespace Wolf_Rabbit
         {
             timer1.Stop();
             Application.Exit();
-        }
-        private void btnLuuFile_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog svd = new SaveFileDialog();
-            svd.Filter = "PNG Image|*.png|JPEG Image|*.jpg";
-            svd.FileName = "";
-            if (svd.ShowDialog() == DialogResult.OK)
-            {
-                chartSoLuong.SaveImage(svd.FileName, ChartImageFormat.Png);
-                MessageBox.Show("Đã lưu biểu đồ");
-            }
-
         }
     }
 

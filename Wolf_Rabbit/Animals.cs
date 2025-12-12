@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Wolf_Rabbit
 {
-    public abstract class Animal //Trừu tượng hóa lớp Animal
+    public abstract class Animal //Lớp cơ sở
     {
         private int positionX;
         private int positionY;

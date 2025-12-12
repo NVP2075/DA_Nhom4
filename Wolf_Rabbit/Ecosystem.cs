@@ -15,14 +15,14 @@ namespace Wolf_Rabbit
         private int cellSize = 10; //Khởi tạo độ rộng của mỗi một ô
         private int worldWidth;
         private int worldHeight;
-        private Random random = new Random();
+        private Random random = new Random();   
         public List<Animal> Animal => animals; //Danh sách chỉ đọc của List<Animal> để duyệt foreach trong
                                                //class form
    
         public Ecosystem(int width, int height, int cellSize) {
             animals =new List<Animal>();
-            this.worldWidth = width;
-            this.worldHeight = height;
+            worldWidth = width;
+            worldHeight = height;
             this.cellSize = cellSize;
             InitializeGrid();
             Reset();    

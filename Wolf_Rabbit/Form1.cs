@@ -46,7 +46,6 @@ namespace Wolf_Rabbit
             chartArea.AxisY.TitleFont = new Font("Arial",10,FontStyle.Bold);
             chartArea.AxisY.MajorGrid.Enabled = false;
             chartSoLuong.ChartAreas.Add(chartArea);
-            chartSoLuong.ChartAreas[0].AxisX.ScaleView.Zoom(tickCount - 10, tickCount);
             //Tạo và cấu hình chart dạng line cho thỏ
             Series rabbit = new Series("Rabbit");
             rabbit.ChartType = SeriesChartType.Line;
@@ -127,21 +126,14 @@ namespace Wolf_Rabbit
             World.Invalidate();
 
         }
-
         private void Stop_Click(object sender, EventArgs e)
         {
             timer1.Stop();
         }
-
         private void txtThoat_Click(object sender, EventArgs e)
         {
             timer1.Stop();
             Application.Exit();
         }
     }
-
-
-
-
-
 }

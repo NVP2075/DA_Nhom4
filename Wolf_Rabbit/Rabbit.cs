@@ -11,41 +11,41 @@ namespace Wolf_Rabbit
     {
         public Rabbit()
         {
-            this.PositionX = 0;
-            this.PositionY = 0;
-            this.Energy = 1;
-            this.Age = 1;
-            this.AnimalColor = Color.White;
-            this.EnergyToReproduce = 10;
-            this.ChangeToReproduce = (float)0.5;
-            this.AgeToReproduce = 3;
-            this.VisionRange = 200;
-            this.MoveSpeed = 12;
+            PositionX = 0;
+            PositionY = 0;
+            Energy = 1;
+            Age = 1;
+            AnimalColor = Color.White;
+            EnergyToReproduce = 10;
+            ChangeToReproduce = (float)0.5;
+            AgeToReproduce = 3;
+            VisionRange = 200;
+            MoveSpeed = 12;
         }
         //Phương thức di chuyển của Rabbit
         public override void Move(List<Animal>[,] grid, int worldWidth, int worldHeight)
         {
-            int indexX = randomGen.Next(-this.MoveSpeed, this.MoveSpeed);
-            int indexY = randomGen.Next(-this.MoveSpeed, this.MoveSpeed);
-            this.PositionX += indexX;
-            this.PositionY += indexY;
-            if(PositionX <0) this.PositionX = 0;
-            if(PositionX > worldWidth -10) this.PositionX = worldWidth -10;
-            if(PositionY<0) this.PositionY = 0;
-            if(PositionY > worldHeight -10) this.PositionY = worldHeight -10;
-            this.Energy += 2;
-            this.Age++;
+            int indexX = randomGen.Next(-MoveSpeed, MoveSpeed);
+            int indexY = randomGen.Next(-MoveSpeed, MoveSpeed);
+            PositionX += indexX;
+            PositionY += indexY;
+            if(PositionX <0) PositionX = 0;
+            if(PositionX > worldWidth -10) PositionX = worldWidth -10;
+            if(PositionY<0) PositionY = 0;
+            if(PositionY > worldHeight -10) PositionY = worldHeight -10;
+            Energy += 2;
+            Age++;
            
         }
         public Rabbit rabbitReproduce()
         {
-            if (this.Age >= AgeToReproduce&&this.Energy >= this.EnergyToReproduce && randomGen.NextDouble() < this.ChangeToReproduce)
+            if (Age >= AgeToReproduce&&Energy >= EnergyToReproduce && randomGen.NextDouble() < ChangeToReproduce)
             {
                 Rabbit babyRabbit = new Rabbit();
-                babyRabbit.PositionX = this.PositionX;
-                babyRabbit.PositionY = this.PositionY;
+                babyRabbit.PositionX = PositionX;
+                babyRabbit.PositionY = PositionY;
                 babyRabbit.AnimalColor = Color.LightSkyBlue;
-                this.Energy = 1;
+                Energy = 1;
                 return babyRabbit;
             }
             return null;
